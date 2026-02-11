@@ -10,6 +10,8 @@ processors:
   batch:
 
 exporters:
+  prometheus:
+    endpoint: 0.0.0.0:8889
   otlphttp/tempo:
     endpoint: https://railway-tempo-production.up.railway.app:4318
   loki:
@@ -25,3 +27,7 @@ service:
       receivers: [otlp]
       processors: [batch]
       exporters: [loki]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus]
