@@ -13,7 +13,7 @@ exporters:
   prometheus:
     endpoint: 0.0.0.0:8889
   otlphttp/tempo:
-    endpoint: https://railway-tempo-production.up.railway.app:4318
+    endpoint: https://railway-tempo-production.up.railway.app
   loki:
     endpoint: https://loki-railway-production-ef5d.up.railway.app/loki/api/v1/push
 
