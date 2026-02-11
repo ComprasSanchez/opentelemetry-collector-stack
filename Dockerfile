@@ -4,4 +4,5 @@ COPY otel-collector-config.yaml /etc/otel-collector-config.yaml
 
 EXPOSE 1888 8888 8889 13133 4317 4318 55679
 
-CMD ["--config=/etc/otel-collector-config.yaml"]
+ENTRYPOINT ["/otelcol-contrib"]
+CMD ["--config=/etc/otel-collector-config.yaml", "--log-level=debug"]
