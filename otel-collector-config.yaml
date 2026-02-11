@@ -12,6 +12,8 @@ processors:
 exporters:
   prometheus:
     endpoint: 0.0.0.0:8889
+    resource_to_telemetry_conversion:
+      enabled: true
   otlphttp/tempo:
     endpoint: http://railway-tempo.railway.internal:4318
   loki:
